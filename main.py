@@ -7,6 +7,7 @@ if __name__ == '__main__':
     print("Comparing " + old_file_name + " to " + new_file_name)
     old_file = open(old_file_name, "r")
     new_file = open(new_file_name, "r")
-    mat = LCSMatrix(old_file.read(), new_file.read())
-    print(mat)
-    print(mat.getSubsequences())
+
+    diffObject = LCSMatrix(old_file.read().split("\n"), new_file.read().split("\n"))
+    diffObject.printMatrix()
+    diffObject.print()
